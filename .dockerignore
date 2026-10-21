@@ -1,0 +1,14 @@
+.git/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Large/host-specific artifacts are mounted as volumes, not baked into the image.
+models/
+index/
+data/
+results/
+tests/
+emissions.csv
+.codecarbon/
+*.gguf

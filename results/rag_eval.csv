@@ -1,0 +1,8 @@
+metric,value
+recall_at_k,1.0
+mrr,1.0
+ndcg_at_k,1.0
+answer_token_f1,0.2438
+answer_rouge_l,0.1729
+answer_similarity,0.5003
+faithfulness_proxy,0.7143

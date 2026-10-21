@@ -1,0 +1,13 @@
+id,category,intent,latency_ms,completion_tokens,tokens_per_second
+1,retrieve_and_answer,retrieve_and_answer,45222.49,53,1.17
+2,retrieve_and_answer,retrieve_and_answer,46530.11,21,0.45
+3,retrieve_and_answer,retrieve_and_answer,56566.22,26,0.46
+4,retrieve_and_answer,retrieve_and_answer,53954.2,50,0.93
+5,retrieve_and_answer,retrieve_and_answer,51613.18,110,2.14
+6,retrieve_and_answer,retrieve_and_answer,43820.13,20,0.46
+7,retrieve_and_answer,retrieve_and_answer,61978.03,111,1.8
+8,retrieve_and_answer,retrieve_and_answer,37348.22,33,0.89
+9,retrieve_and_answer,retrieve_and_answer,67683.42,17,0.25
+10,calculate,calculate,2.2,0,0.0
+11,calculate,calculate,0.7,0,0.0
+12,direct_answer,direct_answer,3744.04,9,2.4

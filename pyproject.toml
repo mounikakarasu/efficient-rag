@@ -1,0 +1,8 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: tests that load the quantized LLM and run real generation",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning:starlette.*",
+]

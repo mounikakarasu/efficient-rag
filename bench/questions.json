@@ -1,0 +1,17 @@
+{
+  "description": "Fixed evaluation set for the Efficient RAG benchmark, targeting the ingested paper in ./data (Lean Fine-Tuning on a Budget).",
+  "questions": [
+    {"id": 1, "question": "What parameter-efficient fine-tuning methods does this paper study?", "category": "retrieve_and_answer"},
+    {"id": 2, "question": "What GPU was used in the experiments and how much VRAM did it have?", "category": "retrieve_and_answer"},
+    {"id": 3, "question": "Which metrics are used to evaluate efficiency in this work?", "category": "retrieve_and_answer"},
+    {"id": 4, "question": "How does LoRA reduce the number of trainable parameters?", "category": "retrieve_and_answer"},
+    {"id": 5, "question": "What role does knowledge distillation play in this study?", "category": "retrieve_and_answer"},
+    {"id": 6, "question": "How are carbon emissions or energy use measured?", "category": "retrieve_and_answer"},
+    {"id": 7, "question": "What is the accuracy-per-VRAM ratio and why does it matter?", "category": "retrieve_and_answer"},
+    {"id": 8, "question": "What tasks or datasets are used for evaluation?", "category": "retrieve_and_answer"},
+    {"id": 9, "question": "What is the main conclusion of the paper?", "category": "retrieve_and_answer"},
+    {"id": 10, "question": "What is 16 * 1024?", "category": "calculate"},
+    {"id": 11, "question": "Calculate 90 divided by 4", "category": "calculate"},
+    {"id": 12, "question": "hello there", "category": "direct_answer"}
+  ]
+}

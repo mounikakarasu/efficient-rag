@@ -1,0 +1,4 @@
+method,recall_at_k,latency_ms_p50,latency_ms_p95
+Dense (HNSW),0.8,5.9,8.4
+Hybrid (BM25+dense+RRF),0.98,1030.5,1247.4
+Hybrid + cross-encoder rerank,1.0,1828.8,3710.8

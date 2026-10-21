@@ -1,0 +1,41 @@
+services:
+  efficient-rag:
+    build: .
+    image: efficient-rag:latest
+    container_name: efficient-rag
+    ports:
+      - "8000:8000"
+    environment:
+      - LOG_LEVEL=INFO
+      - ROUTER_BACKEND=plain
+      - EMBEDDING_BACKEND=torch
+      - EMBEDDING_DEVICE=cpu
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./index:/app/index
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 4g
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant:v1.19.1
+    container_name: qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_storage:/qdrant/storage
+    restart: unless-stopped
+
+volumes:
+  qdrant_storage:
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0) if urllib.request.urlopen('http://localhost:8000/health').status==200 else sys.exit(1)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
